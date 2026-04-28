@@ -6,35 +6,41 @@
 
 ---
 
-##  Valencià (Sentiment del nostre poble)
-Este projecte naix per a donar una solució segura i fàcil als centres educatius de la Comunitat Valenciana. L'objectiu és tindre un núvol privat on la privacitat del professorat siga el més important.
+## 🇪🇸 Castellano
+### ¿Qué es Nextcloud?
+Nextcloud es una plataforma de productividad de código abierto que permite el almacenamiento, sincronización y compartición de archivos (como Google Drive o OneDrive), pero **alojada en tu propio servidor**. Esto garantiza que los datos nunca salgan del centro educativo.
 
-**Objectius clau:**
-- 🔐 **Privacitat:** Només el professorat del grup `GRP_XXXX` pot entrar.
-- 🛡️ **Seguretat:** Bloqueig total i absolut de l'alumnat (@alu.edu.gva.es).
--  Valenciana:** El sistema es configura automàticament en **Valencià**.
-- 🚀 **Automatització:** Desplegament amb Docker en xarxa interna (IP i Port personalitzables).
+### Objetivo del Proyecto
+Este proyecto nace para ofrecer una **alternativa independiente** a las plataformas de Microsoft (Teams, OneDrive) que la GVA ha implantado en los centros. El objetivo es que los centros educativos puedan gestionar sus propios recursos de forma soberana, segura y sin depender de servicios en la nube de grandes corporaciones.
 
-### 🛠️ Guia ràpida:
-1. Executa l'assistent en la nostra llengua: `./instala_va.sh`
-2. Arrenca el servei: `docker-compose up -d --build`
+**Características principales:**
+- 🔐 **Solo profesorado:** Acceso restringido únicamente al grupo de profesores del centro.
+- 🚫 **Bloqueo de alumnos:** Restricción total para cuentas @alu.edu.gva.es.
+- 🏗️ **Independencia:** Los datos se quedan en el servidor local del centro.
+- ⚙️ **Automatización:** Configuración "Zero-Touch" para despliegue rápido.
 
 ---
 
-## 🇪🇸 Castellano
-Instalación automática de Nextcloud para centros GVA. **Uso exclusivo para profesorado y bloqueo total de alumnos.** 
+##  Valencià
+### Què és Nextcloud?
+Nextcloud és una plataforma de productivitat de codi obert que permet l'emmagatzematge, sincronització i compartició de fitxers, però **allotjada en el teu propi servidor**. Això garanteix que les dades mai isquen del centre educatiu.
 
-### 🛠️ Instalación rápida:
-1. Ejecuta el asistente: `./instalar_es.sh`
-2. Arranca el servicio: `docker-compose up -d --build`
+### Objectiu del Projecte
+Este projecte naix per a oferir una **alternativa independent** a les plataformes de Microsoft que la GVA ha implantat en els centres. L'objectiu és que els centres educatius puguen gestionar els seus propis recursos de forma sobirana, segura i sense dependre de serveis en el núvol de grans corporacions.
+
+**Característiques clau:**
+- 🔐 **Només professorat:** Accés restringit únicament al grup de professors del centre.
+- 🚫 **Bloqueig d'alumnes:** Restricció total per a comptes @alu.edu.gva.es.
+- 🏗️ **Independència:** Les dades es queden en el servidor local del centre.
+- ⚙️ **Automatització:** Configuració "Zero-Touch" per a un desplegament ràpid.
 
 ---
 
 ## 👨‍💻 Desenvolupat per / Desarrollado por:
-**[@izandhh](https://github.com/izandhh15)** - Orgullós de la nostra terra.
+**[@izandhh](https://github.com/izandhh15)**
 
 ## 📜 Llicència / Licencia
-**CC BY-NC 4.0** - Reconeixement-NoComercial 4.0 Internacional. (Prohibit l'ús comercial).
+**CC BY-NC 4.0** - Reconeixement-NoComercial 4.0 Internacional.
 
 ---
-<p align="center"> Fet amb ❤️ per i per al professorat valencià. </p>
+<p align="center"> Fet per a la independència tecnològica dels centres valencians. </p>

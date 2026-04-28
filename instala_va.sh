@@ -2,7 +2,7 @@
 VERD='\033[0;32m'; BLAU='\033[0;34m'; GROC='\033[1;33m'; RESET='\033[0m'
 clear
 echo -e "${BLAU}=========================================================="
-echo -e "   ASSISTENT D'INSTAL·LACIÓ (VALENCIÀ)"
+echo -e "   ASSISTENT D.INSTAL·LACIÓ (VALENCIÀ)"
 echo -e "==========================================================${RESET}"
 
 preguntar() {
