@@ -4,48 +4,52 @@
   <img src="https://ceice.gva.es/documents/161863064/162818610/logo_Conselleria_transp_v.png" alt="Generalitat Valenciana" width="300">
 </p>
 
+---
+
+## 🇪🇸 Castellano (Resumen)
+Instalación automática de Nextcloud para centros GVA. **Solo permite profesores del grupo del centro y bloquea alumnos.** 
+
+### Instalación rápida:
+1. `./install.sh` (Introduce IP, Puerto y claves).
+2. `docker-compose up -d --build`
+3. Accede a `http://TU_IP:TU_PUERTO`.
+
+---
+
+##  Valencià
 Este projecte instal·la automàticament un **Nextcloud segur** per a centres educatius de la Comunitat Valenciana.
 
 **Què fa este invent?**
-- 👨‍🏫 **Només entren profes:** Només permet l'accés al professorat del TEU centre.
-- 🚫 **Alumnes fora:** Bloqueja automàticament qualsevol compte que siga d'alumne (@alu.edu.gva.es).
-- 🌐 **Xarxa Interna:** Preparat per a funcionar en la IP del teu centre.
-- ⚙️ **Tot automàtic:** No has de configurar res dins de la web, l'script ho fa per tu.
+- 👨‍🏫 **Només profes:** Només permet l'accés al professorat del TEU centre.
+- 🚫 **Alumnes fora:** Bloqueja comptes @alu.edu.gva.es.
+- 🌐 **Xarxa Interna:** Tu eliges la IP i el Port.
+- ⚙️ **Tot automàtic:** Zero configuració manual.
+
+### 🛠️ Guia ràpida:
+1. Executa `./install.sh` i respon a les preguntes.
+2. Escriu: `docker-compose up -d --build`
+3. Entra en la IP i port que has triat.
 
 ---
 
-## 🛠️ Guia per a novells (Pas a pas)
-
-No cal ser un expert, només segueix estos 3 passos:
-
-### 1. Descarrega el projecte
-Entra en la carpeta on l'hages descarregat usant la terminal.
-
-### 2. Configura les teues dades (L'assistent màgic)
-Executa este comanda i **respon a les preguntes** que t'eixiran en pantalla (la IP del servidor, el codi del centre, la clau del LDAP, etc.):
-```bash
-./install.sh
-```
-
-### 3. Arrenca el motor!
-Una vegada acabes de respondre, escriu açò perquè tot comence a instal·lar-se sol:
-```bash
-docker-compose up -d --build
-```
-
-Espera uns minuts, obri el teu navegador i posa la IP que has configurat (ej: `http://192.168.1.50:8080`).
+## 👨‍💻 Desenvolupat per / Desarrollado por:
+**[@izandhh](https://github.com/izandhh15)**
 
 ---
 
-## 🔒 Seguretat
-Este projecte utilitza un arxiu ocult anomenat `.env` per a guardar les teues contrasenyes. **Mai compartisques este arxiu amb ningú**. L'assistent `install.sh` el crea per tu de forma segura.
+## 📜 Llicència / Licencia
+Este projecte està sota la llicència **Creative Commons Atribució-NoComercial 4.0 Internacional (CC BY-NC 4.0)**.
 
----
-
-### 👨‍💻 Desenvolupat per:
-**Developed by [@izandhh](https://github.com/izandhh15)**
-
----
 <p align="center">
-  Fet amb ❤️ per a la comunitat educativa de la GVA.
+  <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+    <img alt="Llicència Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+  </a>
 </p>
+
+Açò significa que:
+- **Pots compartir i adaptar** el codi.
+- **Has de donar crèdit** a l'autor original.
+- **NO pots usar-lo per a fins comercials** (benefici propi).
+
+---
+<p align="center"> Fet amb ❤️ per a la comunitat educativa de la GVA. </p>
