@@ -3,7 +3,7 @@ services:
   db:
     image: mariadb:10.6
     command: --transaction-isolation=READ-COMMITTED --log-bin=binlog --binlog-format=ROW
-   .environment:
+    environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
       - MYSQL_DATABASE=${MYSQL_DATABASE}
       - MYSQL_USER=${MYSQL_USER}
@@ -13,10 +13,11 @@ services:
     container_name: nextcloud-ldap-gva
     ports: ["8080:80"]
     depends_on: [db]
-   .env_file: .env
-   .environment:
+    env_file: .env
+    environment:
       - NEXTCLOUD_ADMIN_USER=${NEXTCLOUD_ADMIN_USER}
       - NEXTCLOUD_ADMIN_PASSWORD=${NEXTCLOUD_ADMIN_PASSWORD}
+      - NEXTCLOUD_TRUSTED_DOMAINS=${NEXTCLOUD_TRUSTED_DOMAINS}
       - MYSQL_DATABASE=${MYSQL_DATABASE}
       - MYSQL_USER=${MYSQL_USER}
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}

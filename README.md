@@ -4,47 +4,48 @@
   <img src="https://ceice.gva.es/documents/161863064/162818610/logo_Conselleria_transp_v.png" alt="Generalitat Valenciana" width="300">
 </p>
 
-Este proyecto instala automáticamente un **Nextcloud seguro** para centros educativos de la Comunitat Valenciana. 
+Este projecte instal·la automàticament un **Nextcloud segur** per a centres educatius de la Comunitat Valenciana.
 
-**¿Qué hace este invento?**
-- 👨‍🏫 **Solo entran profes:** Solo permite el acceso al profesorado de TU centro.
-- 🚫 **Alumnos fuera:** Bloquea automáticamente a cualquier cuenta que sea de alumno (@alu.edu.gva.es).
-- ⚙️ **Todo automático:** No tienes que configurar nada dentro de la web, el script lo hace por ti.
+**Què fa este invent?**
+- 👨‍🏫 **Només entren profes:** Només permet l'accés al professorat del TEU centre.
+- 🚫 **Alumnes fora:** Bloqueja automàticament qualsevol compte que siga d'alumne (@alu.edu.gva.es).
+- 🌐 **Xarxa Interna:** Preparat per a funcionar en la IP del teu centre.
+- ⚙️ **Tot automàtic:** No has de configurar res dins de la web, l'script ho fa per tu.
 
 ---
 
-## 🛠️ Guía para novatos (Paso a paso)
+## 🛠️ Guia per a novells (Pas a pas)
 
-No hace falta ser un experto, solo sigue estos 3 pasos:
+No cal ser un expert, només segueix estos 3 passos:
 
-### 1. Descarga el proyecto
-Entra en la carpeta donde lo hayas descargado usando la terminal.
+### 1. Descarrega el projecte
+Entra en la carpeta on l'hages descarregat usant la terminal.
 
-### 2. Configura tus datos (El asistente mágico)
-Ejecuta este comando y **responde a las preguntas** que te saldrán en pantalla (el código de tu centro, la clave del LDAP, etc.):
+### 2. Configura les teues dades (L'assistent màgic)
+Executa este comanda i **respon a les preguntes** que t'eixiran en pantalla (la IP del servidor, el codi del centre, la clau del LDAP, etc.):
 ```bash
 ./install.sh
 ```
 
-### 3. ¡Arranca el motor!
-Una vez termines de responder, escribe esto para que todo empiece a instalarse solo:
+### 3. Arrenca el motor!
+Una vegada acabes de respondre, escriu açò perquè tot comence a instal·lar-se sol:
 ```bash
 docker-compose up -d --build
 ```
 
-Espera unos minutos, abre tu navegador y pon: `http://localhost:8080`
+Espera uns minuts, obri el teu navegador i posa la IP que has configurat (ej: `http://192.168.1.50:8080`).
 
 ---
 
-## 🔒 Seguridad
-Este proyecto utiliza un archivo oculto llamado `.env` para guardar tus contraseñas. **Nunca compartas ese archivo con nadie**. El asistente `install.sh` lo crea por ti de forma segura.
+## 🔒 Seguretat
+Este projecte utilitza un arxiu ocult anomenat `.env` per a guardar les teues contrasenyes. **Mai compartisques este arxiu amb ningú**. L'assistent `install.sh` el crea per tu de forma segura.
 
 ---
 
-### 👨‍💻 Desarrollado por:
+### 👨‍💻 Desenvolupat per:
 **Developed by [@izandhh](https://github.com/izandhh15)**
 
 ---
 <p align="center">
-  Hecho con ❤️ para la comunidad educativa de la GVA.
+  Fet amb ❤️ per a la comunitat educativa de la GVA.
 </p>
