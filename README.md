@@ -7,32 +7,86 @@
 ---
 
 ## 🇪🇸 Castellano
+
 ### ¿Qué es Nextcloud?
 Nextcloud es una plataforma de productividad de código abierto que permite el almacenamiento, sincronización y compartición de archivos (como Google Drive o OneDrive), pero **alojada en tu propio servidor**. Esto garantiza que los datos nunca salgan del centro educativo.
 
 ### Objetivo del Proyecto
-Este proyecto nace para ofrecer una **alternativa independiente** a las plataformas de Microsoft (Teams, OneDrive) que la GVA ha implantado en los centros. El objetivo es que los centros educativos puedan gestionar sus propios recursos de forma soberana, segura y sin depender de servicios en la nube de grandes corporaciones.
+Este proyecto ofrece una **alternativa independiente** a las plataformas de Microsoft (Teams, OneDrive) de la GVA. El objetivo es que los centros educativos gestionen sus propios recursos de forma soberana, segura y sin depender de servicios externos de grandes corporaciones.
 
-**Características principales:**
-- 🔐 **Solo profesorado:** Acceso restringido únicamente al grupo de profesores del centro.
-- 🚫 **Bloqueo de alumnos:** Restricción total para cuentas @alu.edu.gva.es.
-- 🏗️ **Independencia:** Los datos se quedan en el servidor local del centro.
-- ⚙️ **Automatización:** Configuración "Zero-Touch" para despliegue rápido.
+---
+
+### 🛠️ Manual de Instalación Paso a Paso
+
+#### 1. Requisitos previos
+- Tener instalado **Docker** y **Docker Compose**.
+- Estar en la red interna del centro para conectar con el LDAP.
+
+#### 2. Ejecutar el asistente
+Elige el idioma del asistente. Esto también configurará el idioma de Nextcloud:
+- En Castellano: `./instalar_es.sh`
+- En Valencià: `./instala_va.sh`
+
+#### 3. Preguntas del asistente (Explicación)
+El script te pedirá los siguientes datos:
+1.  **IP interna del servidor**: La dirección IP local del ordenador donde instalas Nextcloud (ej: 192.168.1.50).
+2.  **Puerto para el servicio**: Por defecto 8080. Es el puerto que pondrás en el navegador.
+3.  **Clave ROOT MariaDB**: Contraseña maestra para la base de datos (se genera una al azar si la dejas en blanco).
+4.  **Clave usuario Nextcloud DB**: Contraseña para el acceso de la aplicación a los datos.
+5.  **Nombre administrador web**: El usuario "jefe" para entrar a Nextcloud (ej: admin).
+6.  **Contraseña administrador web**: La clave para ese usuario.
+7.  **Servidor LDAP GVA**: Por defecto `ldapad.edu.gva.es`.
+8.  **DN Agente consulta**: El usuario que lee el LDAP (ej: `cn=consulta_DA,ou=educacion,dc=edu,dc=gva,dc=es`).
+9.  **Contraseña consulta**: La contraseña de ese usuario (necesaria para conectar).
+10. **Base de búsqueda**: `dc=edu,dc=gva,dc=es`.
+11. **Código centro**: Tu código de centro (ej: 46026160). **Esto es vital para que solo entren tus profes.**
+
+#### 4. Lanzar el servicio
+Una vez finalizado el asistente, escribe:
+```bash
+docker-compose up -d --build
+```
 
 ---
 
 ##  Valencià
+
 ### Què és Nextcloud?
-Nextcloud és una plataforma de productivitat de codi obert que permet l'emmagatzematge, sincronització i compartició de fitxers, però **allotjada en el teu propi servidor**. Això garanteix que les dades mai isquen del centre educatiu.
+Nextcloud és una plataforma de productivitat de codi obert que permet l'emmagatzematge de fitxers (com Google Drive o OneDrive), però **allotjada en el teu propi servidor**.
 
 ### Objectiu del Projecte
-Este projecte naix per a oferir una **alternativa independent** a les plataformes de Microsoft que la GVA ha implantat en els centres. L'objectiu és que els centres educatius puguen gestionar els seus propis recursos de forma sobirana, segura i sense dependre de serveis en el núvol de grans corporacions.
+Este projecte ofereix una **alternativa independent** a les plataformes de Microsoft imposades en els centres. L'objectiu és la **sobirania tecnològica**: gestionar els recursos de forma segura i sense dependre de multinacionals.
 
-**Característiques clau:**
-- 🔐 **Només professorat:** Accés restringit únicament al grup de professors del centre.
-- 🚫 **Bloqueig d'alumnes:** Restricció total per a comptes @alu.edu.gva.es.
-- 🏗️ **Independència:** Les dades es queden en el servidor local del centre.
-- ⚙️ **Automatització:** Configuració "Zero-Touch" per a un desplegament ràpid.
+---
+
+### 🛠️ Manual d'Instal·lació Pas a Pas
+
+#### 1. Requisits previs
+- Tindre instal·lat **Docker** i **Docker Compose**.
+
+#### 2. Executar l'assistent
+- En Valencià: `./instala_va.sh` (Açò posarà Nextcloud en valencià).
+- En Castellà: `./instalar_es.sh`
+
+#### 3. Preguntes de l'assistent (Explicació)
+L'script et demanarà:
+1.  **IP interna del servidor**: La IP local del servidor (ej: 192.168.1.50).
+2.  **Port per al servei**: Per defecte 8080.
+3.  **Clau ROOT MariaDB**: Contrasenya mestra de la base de dades.
+4.  **Clau usuari Nextcloud DB**: Contrasenya d'accés per a l'aplicació.
+5.  **Nom administrador web**: L'usuari per a entrar a la web (ej: admin).
+6.  **Contrasenya administrador web**: La clau per a eixe usuari.
+7.  **Servidor LDAP GVA**: `ldapad.edu.gva.es`.
+8.  **DN Agent consulta**: L'usuari que llegeix l'LDAP.
+9.  **Contrasenya consulta**: La clau d'eixe usuari de consulta.
+10. **Base de cerca**: `dc=edu,dc=gva,dc=es`.
+11. **Codi centre**: El codi del teu centre (ej: 46026160). **Açò assegura que només entren els teus profes.**
+
+#### 4. Llançar el servei
+Escrit:
+```bash
+docker-compose up -d --build
+```
 
 ---
 
