@@ -4,6 +4,11 @@ sleep 10
 
 occ() { sudo -u www-data php /var/www/html/occ "$@"; }
 
+# Configurar idioma i localització
+occ config:system:set default_language --value="${NEXTCLOUD_LANGUAGE}"
+occ config:system:set default_locale --value="${NEXTCLOUD_LANGUAGE}_ES"
+
+# Configurar LDAP
 occ app:enable user_ldap
 occ ldap:create-empty-config s01
 occ ldap:set-config s01 ldapHost "${LDAP_HOST}"
